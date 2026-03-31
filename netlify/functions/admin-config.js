@@ -17,7 +17,7 @@ exports.handler = async (event) => {
       return ok(data || {});
     }
 
-    if (event.httpMethod === 'POST') {
+    if (event.httpMethod === 'POST' || event.httpMethod === 'PATCH') {
       const body = JSON.parse(event.body || '{}');
       await db.from('editorial_config')
         .upsert({ id: 'default', ...body, updated_at: new Date().toISOString() },
