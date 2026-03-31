@@ -8,7 +8,7 @@ const { createClient } = require('@supabase/supabase-js');
 // Set FRONTEND_URL in Netlify env vars, e.g. https://pulse-newsradar.netlify.app
 const CORS = {
   'Access-Control-Allow-Origin':  process.env.FRONTEND_URL || '*',
-  'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS',
+'Access-Control-Allow-Methods': 'GET, POST, PATCH, DELETE, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type, Authorization',
   'Content-Type': 'application/json'
 };
