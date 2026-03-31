@@ -1,0 +1,100 @@
+[build]
+  functions = "netlify/functions"
+
+[functions."ingest"]
+  schedule = "*/5 * * * *"
+
+[[redirects]]
+  from = "/api/cities"
+  to = "/.netlify/functions/cities"
+  status = 200
+
+[[redirects]]
+  from = "/api/cities/:id/stories"
+  to = "/.netlify/functions/city-stories"
+  status = 200
+
+[[redirects]]
+  from = "/api/cities/:id/nearby"
+  to = "/.netlify/functions/city-nearby"
+  status = 200
+
+[[redirects]]
+  from = "/api/feed/global"
+  to = "/.netlify/functions/feed-global"
+  status = 200
+
+[[redirects]]
+  from = "/api/session/:id/visit"
+  to = "/.netlify/functions/session-visit"
+  status = 200
+
+[[redirects]]
+  from = "/api/config"
+  to = "/.netlify/functions/config"
+  status = 200
+
+[[redirects]]
+  from = "/api/email"
+  to = "/.netlify/functions/email"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/analytics"
+  to = "/.netlify/functions/admin-analytics"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/activity"
+  to = "/.netlify/functions/admin-activity"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/config"
+  to = "/.netlify/functions/admin-config"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/sessions"
+  to = "/.netlify/functions/admin-sessions"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/emails"
+  to = "/.netlify/functions/admin-emails"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/emails/:id"
+  to = "/.netlify/functions/admin-emails"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/jobs"
+  to = "/.netlify/functions/admin-jobs"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/jobs/:name/run"
+  to = "/.netlify/functions/admin-jobs"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/cities/add"
+  to = "/.netlify/functions/admin-cities"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/cities/remove"
+  to = "/.netlify/functions/admin-cities"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/sources"
+  to = "/.netlify/functions/admin-sources"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/keys"
+  to = "/.netlify/functions/admin-keys"
+  status = 200
